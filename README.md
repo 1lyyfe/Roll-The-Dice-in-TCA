@@ -2,11 +2,11 @@
 
 <table align="center">
   <tr>
-    <td align="center"><b>🎲 Live Preview</b></td>
+    <td align="center"><b>🎲 Preview</b></td>
   </tr>
   <tr>
     <td>
-      <video src="YOUR_VIDEO_LINK_HERE.mp4" width="320" autoplay loop muted></video>
+      <video src="https://github.com/user-attachments/assets/998d21c8-d510-48c6-adca-be600ed00b71" width="320" autoplay loop muted></video>
     </td>
   </tr>
 </table>
@@ -252,6 +252,14 @@ Clone the repo, run the app, and learn TCA by building something delightful!
 ```bash
 git clone https://github.com/1lyyfe/Roll-The-Dice-in-TCA.git
 ```
+
+---
+
+## 💡 Looking for More Ideas?
+
+If you're inspired to build more, check out my best-selling guide:
+
+👉 [100 iOS App Ideas with MVP Scopes](https://heeydurh.gumroad.com/l/hwfkko) — perfect for indie devs, TCA learners, and SwiftUI side projects!
 
 ---
 
