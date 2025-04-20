@@ -228,6 +228,49 @@ swift
 
 ---
 
+## 🛠 App Entry Point
+
+To bring your TCA-powered app to life, we need to wire the `Store` into your root view.
+
+Here’s what your app entry point should look like:
+
+```swift
+import SwiftUI
+import ComposableArchitecture
+
+@main
+struct Roll_The_Dice_in_TCAApp: App {
+    var body: some Scene {
+        WindowGroup {
+            NavigationStack {
+                DiceView(
+                    store: Store(
+                        initialState: DiceFeature.State()
+                    ) {
+                        DiceFeature()
+                    }
+                )
+            }
+        }
+    }
+}
+```
+
+### 💡 Why do we need this?
+TCA works through a central `Store` which holds:
+- Your feature’s `State`
+- A reducer that handles `Action`
+- A place to emit `Effect`s
+
+By injecting this store into the view hierarchy at the app’s root, everything is ready to:
+- React to user interaction
+- Update state predictably
+- Trigger side effects like animations, async tasks, or navigation
+
+Without this store injection, your TCA-powered views won’t function — this is where TCA “starts up.”
+
+---
+
 ## 🎨 View Highlights
 The main UI is clean and fun:
 - Bouncy roll animation with `scale`, `rotation`, and `offset`
