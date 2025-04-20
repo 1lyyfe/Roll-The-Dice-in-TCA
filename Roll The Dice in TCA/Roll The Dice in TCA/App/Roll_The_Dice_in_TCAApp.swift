@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct Roll_The_Dice_in_TCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                DiceView(
+                    store: Store(
+                        initialState: DiceFeature.State()
+                    ) {
+                        DiceFeature()
+                    }
+                )
+            }
         }
     }
 }
