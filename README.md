@@ -40,7 +40,24 @@ At its core, TCA breaks your app into:
 | `Store`     | Holds your state, lets you send actions, and binds to your views |
 | `Effect`    | Anything that happens "outside" the reducer — async, delays, etc.|
 
-### 🧵 vs MVVM or Vanilla SwiftUI
+#### 🔍 What is `@ObservableState`?
+
+This is TCA’s replacement for `@BindableState`, built on Swift’s `Observation` framework.
+
+It does **two things**:
+
+1. Automatically makes the `State` observable by SwiftUI views  
+2. Enables binding with the `@Bindable` property wrapper on views
+
+It’s required for:
+- UI to reflect state changes
+- Binding fields like toggles, sliders, and textfields cleanly
+
+> Think of `@ObservableState` as a declaration that this state should participate in the SwiftUI observation system.
+
+
+
+### 🧵 TCA vs MVVM or Vanilla SwiftUI
 |                | MVVM                  | SwiftUI (Vanilla)      | TCA ✅                          |
 |----------------|------------------------|--------------------------|---------------------------------|
 | State Centralization | ❌ Scattered           | ❌ View-bound            | ✅ Global + testable            |
